@@ -48,7 +48,7 @@ class FormularioHotel extends Component {
     }
 
     componentDidMount() {
-        if(this.props.hotels) {
+        if(this.props.peliculas) {
             this.props.history.push('/');
         }
     }
