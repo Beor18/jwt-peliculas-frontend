@@ -43,14 +43,14 @@ export function formularioHotel(data) {
     return dispatch => {
         axios({
             method: 'POST',
-            url: URL_BASE + 'hoteles',
+            url: URL_BASE + 'peliculas',
             headers: headers,
             data: data
         })
         .then(response => {
             dispatch({
                 type: AGREGAR_HOTEL,
-                payload: response.data.data
+                payload: response.data
             })
         })
         .catch(err => {

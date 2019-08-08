@@ -11,7 +11,7 @@ class FormularioHotel extends Component {
         super(props);
         this.state = {
             name: '',
-            price: '',
+            description: '',
             errors: {}
         }
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -26,17 +26,17 @@ class FormularioHotel extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const hotel = {
-            hotel: {
+        const pelicula = {
+            pelicula: {
                 name: this.state.name,
-                price: this.state.price
+                description: this.state.description
              }
         }
-        this.props.formularioHotel(hotel, this.props.history.push('/'));
+        this.props.formularioHotel(pelicula, this.props.history.push('/'));
     }
 
     componentWillReceiveProps(nextProps) {
-        if(nextProps.hotels) {
+        if(nextProps.peliculas) {
             this.props.history.push('/')
         }
         if(nextProps.errors) {
@@ -74,16 +74,16 @@ class FormularioHotel extends Component {
                 </div>
                 <div className="form-group">
                     <input
-                    type="number"
+                    type="text"
                     placeholder="Precio"
                     className={classnames('form-control form-control-lg', {
-                        'is-invalid': errors.price
+                        'is-invalid': errors.description
                     })}
-                    name="price"
+                    name="description"
                     onChange={ this.handleInputChange }
-                    value={ this.state.price }
+                    value={ this.state.description }
                     />
-                    {errors.price && (<div className="invalid-feedback">{errors.price}</div>)}
+                    {errors.description && (<div className="invalid-feedback">{errors.description}</div>)}
                 </div>
                 
                 <div className="form-group">
@@ -104,7 +104,7 @@ FormularioHotel.propTypes = {
 
 const mapStateToProps = (state, props) => ({
     auth: state.auth,
-    hotels: state.auth.hotels,
+    peliculas: state.auth.peliculas,
     errors: state.errors
 });
 
