@@ -8,7 +8,7 @@ const URL_BASE = 'https://api-mas-tv.herokuapp.com/api/';
 const headers = {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' +  localStorage.getItem('token')
+    'Authorization': 'Bearer ' +  localStorage.getItem('jwt')
 }
 
 export const registerUser = (user, history) => dispatch => {
