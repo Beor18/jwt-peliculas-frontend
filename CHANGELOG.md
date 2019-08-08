@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.3...v0.0.4) (2019-08-08)
+
+
+### Bug Fixes
+
+* actions auth ([16d631b](https://github.com/Beor18/jwt-peliculas-frontend/commit/16d631b))
+* change actions auth ([61007d1](https://github.com/Beor18/jwt-peliculas-frontend/commit/61007d1))
+* change component ([3306cb0](https://github.com/Beor18/jwt-peliculas-frontend/commit/3306cb0))
+* fomulario hotel ([9d9bc0e](https://github.com/Beor18/jwt-peliculas-frontend/commit/9d9bc0e))
+
 ### [0.0.3](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.2...v0.0.3) (2019-08-08)
 
 
