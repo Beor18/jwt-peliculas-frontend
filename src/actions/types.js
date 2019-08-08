@@ -1,0 +1,5 @@
+export const GET_ERRORS = 'GET_ERRORS';
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const CARGAR_USUARIO = 'CARGAR_USUARIO';
+export const CARGAR_HOTELES = 'CARGAR_HOTELES';
+export const AGREGAR_HOTEL = 'AGREGAR_HOTEL';
