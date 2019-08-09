@@ -14,8 +14,8 @@ class Perfil extends React.Component {
     const {isAuthenticated} = this.props.auth;
     const authLinks = (
       <div>
-        <h2>Perfil</h2>
-        Email del Usuario: <h4>{this.props.users.email}</h4>
+        <h2>Perfil de {this.props.user.name}</h2>
+        Email del Usuario: <h4>{this.props.user.email}</h4>
       </div>
     )
     const guestLinks = (

@@ -4,7 +4,6 @@ import isEmpty from '../validation/is-empty';
 const initialState = {
     isAuthenticated: false,
     user: {},
-    users: {},
     peliculas: []
 }
 
@@ -23,7 +22,7 @@ export default function(state = initialState, action ) {
                 Object.assign({},
                     state, {
                         isAuthenticated: !isEmpty(action.payload),
-                        users: action.payload
+                        user: action.payload
                     }
                 )
             }

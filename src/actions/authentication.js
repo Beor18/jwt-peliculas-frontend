@@ -12,7 +12,7 @@ const headers = {
 }
 
 export const registerUser = (user, history) => dispatch => {
-    axios.post(URL_BASE + 'sign_up', user)
+    axios.post(URL_BASE + 'users/register', user)
             .then(res => user)
             .catch(err => {
                 dispatch({
@@ -66,7 +66,7 @@ export function cargarUsuario() {
     return dispatch => {
         axios({
             method: 'GET',
-            url: URL_BASE + 'my_user',
+            url: URL_BASE + 'perfil',
             headers: headers,
         })
         .then(response => dispatch({
