@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.4...v0.0.5) (2019-08-09)
+
+
+### Bug Fixes
+
+* change auth ([70a8373](https://github.com/Beor18/jwt-peliculas-frontend/commit/70a8373))
+* fix name token ([ada6cad](https://github.com/Beor18/jwt-peliculas-frontend/commit/ada6cad))
+
+
+### Features
+
+* changes actions, reducers and components ([cb3c03a](https://github.com/Beor18/jwt-peliculas-frontend/commit/cb3c03a))
+
 ### [0.0.4](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.3...v0.0.4) (2019-08-08)
 
 
