@@ -56,7 +56,7 @@ export function formularioHotel(data) {
         .catch(err => {
             dispatch({
                 type: GET_ERRORS,
-                payload: err.response.data.errors
+                payload: err.response.data
             });
         });
     }
