@@ -37,7 +37,7 @@ Perfil.propTypes = {
 function mapStateToProps(state, props) {
   return {
     auth: state.auth,
-    users: state.auth.users
+    user: state.auth.user
   }
 }
 
