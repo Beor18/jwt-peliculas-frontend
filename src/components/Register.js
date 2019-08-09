@@ -29,13 +29,11 @@ class Register extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = {
-            user: {
                 name: this.state.name,
                 email: this.state.email,
                 password: this.state.password,
                 password_confirm: this.state.password_confirm
-             }
-        }
+            }
         this.props.registerUser(user, this.props.history.push('/login'));
     }
 
