@@ -1,6 +1,6 @@
 {
     "name": "jwt_peliculas_client",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "private": true,
     "dependencies": {
         "axios": "^0.18.1",

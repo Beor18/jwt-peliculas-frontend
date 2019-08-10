@@ -27,10 +27,8 @@ class FormularioHotel extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const pelicula = {
-            pelicula: {
-                name: this.state.name,
-                description: this.state.description
-             }
+            name: this.state.name,
+            description: this.state.description
         }
         this.props.formularioHotel(pelicula, this.props.history.push('/'));
     }

@@ -10,9 +10,10 @@ class Register extends Component {
     constructor() {
         super();
         this.state = {
+            name: '',
             email: '',
             password: '',
-            password_confirmation: '',
+            password_confirm: '',
             errors: {}
         }
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -28,12 +29,11 @@ class Register extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = {
-            user: {
+                name: this.state.name,
                 email: this.state.email,
                 password: this.state.password,
-                password_confirmation: this.state.password_confirmation
-             }
-        }
+                password_confirm: this.state.password_confirm
+            }
         this.props.registerUser(user, this.props.history.push('/login'));
     }
 
@@ -60,6 +60,19 @@ class Register extends Component {
         <div className="container" style={{ marginTop: '50px', width: '700px'}}>
             <h2 style={{marginBottom: '40px'}}>Registrarse</h2>
             <form onSubmit={ this.handleSubmit }>
+            <div className="form-group">
+                    <input
+                    type="text"
+                    placeholder="Nombre"
+                    className={classnames('form-control form-control-lg', {
+                        'is-invalid': errors.name
+                    })}
+                    name="name"
+                    onChange={ this.handleInputChange }
+                    value={ this.state.name }
+                    />
+                    {errors.name && (<div className="invalid-feedback">{errors.name}</div>)}
+                </div>
                 <div className="form-group">
                     <input
                     type="email"
@@ -91,13 +104,13 @@ class Register extends Component {
                     type="password"
                     placeholder="Confirmar Contraseña"
                     className={classnames('form-control form-control-lg', {
-                        'is-invalid': errors.password_confirmation
+                        'is-invalid': errors.password_confirm
                     })}
-                    name="password_confirmation"
+                    name="password_confirm"
                     onChange={ this.handleInputChange }
-                    value={ this.state.password_confirmation }
+                    value={ this.state.password_confirm }
                     />
-                    {errors.password_confirmation && (<div className="invalid-feedback">{errors.password_confirmation}</div>)}
+                    {errors.password_confirm && (<div className="invalid-feedback">{errors.password_confirm}</div>)}
                 </div>
                 <div className="form-group">
                     <button type="submit" className="btn btn-danger" style={{  width: '100%'}}>

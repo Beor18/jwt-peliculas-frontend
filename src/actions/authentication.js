@@ -12,7 +12,7 @@ const headers = {
 }
 
 export const registerUser = (user, history) => dispatch => {
-    axios.post(URL_BASE + 'sign_up', user)
+    axios.post(URL_BASE + 'users/register', user)
             .then(res => user)
             .catch(err => {
                 dispatch({
@@ -56,7 +56,7 @@ export function formularioHotel(data) {
         .catch(err => {
             dispatch({
                 type: GET_ERRORS,
-                payload: err.response.data.errors
+                payload: err.response.data
             });
         });
     }
@@ -66,7 +66,7 @@ export function cargarUsuario() {
     return dispatch => {
         axios({
             method: 'GET',
-            url: URL_BASE + 'my_user',
+            url: URL_BASE + 'perfil',
             headers: headers,
         })
         .then(response => dispatch({
@@ -100,7 +100,7 @@ export const setCurrentUser = decoded => {
 }
 
 export const logoutUser = (history) => dispatch => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('jwt');
     setAuthToken(false);
     dispatch(setCurrentUser({}));
 }
