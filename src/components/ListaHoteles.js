@@ -42,7 +42,7 @@ ListaHoteles.propTypes = {
 
 const mapStateToProps = (state, props) => ({
     auth: state.auth,
-    peliculas: state.auth.peliculas.peliculas
+    peliculas: state.auth.peliculas
 })
 
 export default connect(mapStateToProps, { cargarHoteles })(withRouter(ListaHoteles));
