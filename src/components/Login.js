@@ -35,11 +35,6 @@ class Login extends Component {
     componentDidMount() {
         if(this.props.auth.isAuthenticated) {
             this.props.history.push('/');
-        } else {
-            const mensaje = {
-                error: 'Ups hubo un error'
-            };
-            return console.log(mensaje);
         }
     }
 
@@ -48,9 +43,15 @@ class Login extends Component {
             this.props.history.push('/')
         }
         if(nextProps.errors) {
-            this.setState({
+            const f = this.setState({
                 errors: nextProps.errors
             });
+            console.log('>>>>> ', f )
+        }  else {
+            const mensaje = {
+                error: 'Ups hubo un error'
+            };
+            return console.log(mensaje);
         }
     }
 
