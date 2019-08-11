@@ -17,13 +17,13 @@ class ListaHoteles extends Component {
     }
 
     listarHoteles() {
-        const pelicula = this.props.peliculas
-        return Object.keys(pelicula).map(key => ( 
+        const peliculas = this.props.peliculas
+        return Object.keys(peliculas).map(key => ( 
             <div key={key} className="card col-lg-4 col-md-4 col-sm-4 col-xs-12 mx-1" style={{ float: 'left', marginTop: '15px', maxWidth: '425px'}}>
                 <div className="card-body">
-                <h6 className="card-title">{pelicula[key]._id}</h6>
-                <h5 className="card-title">{pelicula[key].name}</h5>
-                <p className="card-text"> {pelicula[key].description} </p>
+                <h6 className="card-title">{peliculas[key]._id}</h6>
+                <h5 className="card-title">{peliculas[key].name}</h5>
+                <p className="card-text"> {peliculas[key].description} </p>
                 </div>
             </div>
         ))

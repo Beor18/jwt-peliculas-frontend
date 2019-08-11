@@ -43,16 +43,10 @@ class Login extends Component {
             this.props.history.push('/')
         }
         if(nextProps.errors) {
-            const f = this.setState({
+            this.setState({
                 errors: nextProps.errors
             });
-            console.log('>>>>> ', f )
-        }  else {
-            const mensaje = {
-                error: 'Ups hubo un error'
-            };
-            return console.log(mensaje);
-        }
+        } 
     }
 
     render() {
