@@ -35,6 +35,11 @@ class Login extends Component {
     componentDidMount() {
         if(this.props.auth.isAuthenticated) {
             this.props.history.push('/');
+        } else {
+            const mensaje = {
+                error: 'Ups hubo un error'
+            };
+            return console.log(mensaje);
         }
     }
 
