@@ -16,7 +16,7 @@ export default function(state = initialState, action ) {
                 user: action.payload
             }
         case CARGAR_USUARIO:
-        console.log(action)
+        console.log(action.payload)
             return {
                 ...state =
                 Object.assign({},
@@ -33,7 +33,7 @@ export default function(state = initialState, action ) {
                 Object.assign({}, 
                     state, {
                         isAuthenticated: !isEmpty(action.payload),
-                        peliculas: action.payload
+                        peliculas: action.payload.peliculas
                     }
                 )
             }

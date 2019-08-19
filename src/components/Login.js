@@ -46,7 +46,7 @@ class Login extends Component {
             this.setState({
                 errors: nextProps.errors
             });
-        }
+        } 
     }
 
     render() {
