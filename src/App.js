@@ -6,6 +6,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Home from './components/Home';
 import Perfil from './components/Perfil';
+import ListaRegistro from './components/lista-registro/ListaRegistro';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,6 +23,7 @@ class App extends Component {
                   <Route exact path="/register" component={ Register } />
                   <Route exact path="/login" component={ Login } />
                   <Route exact path="/perfil" component={ Perfil } />
+                  <Route exact path="/cargar-registro" component={ ListaRegistro } />
                 </div>
             </div>
         </Router>
