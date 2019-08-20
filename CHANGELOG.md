@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.5...v0.0.6) (2019-08-20)
+
+
+### Bug Fixes
+
+* change component login ([8aa8c3c](https://github.com/Beor18/jwt-peliculas-frontend/commit/8aa8c3c))
+* change reducer auth ([1786c1f](https://github.com/Beor18/jwt-peliculas-frontend/commit/1786c1f))
+* changes components ([e3f1b4e](https://github.com/Beor18/jwt-peliculas-frontend/commit/e3f1b4e))
+* changes lista and login components ([54f6b3d](https://github.com/Beor18/jwt-peliculas-frontend/commit/54f6b3d))
+* component ([be4925c](https://github.com/Beor18/jwt-peliculas-frontend/commit/be4925c))
+* component ([1fe6e23](https://github.com/Beor18/jwt-peliculas-frontend/commit/1fe6e23))
+* fix auth ([bd824e5](https://github.com/Beor18/jwt-peliculas-frontend/commit/bd824e5))
+* fix component login ([3fcda3e](https://github.com/Beor18/jwt-peliculas-frontend/commit/3fcda3e))
+* fix perfil ([3a73952](https://github.com/Beor18/jwt-peliculas-frontend/commit/3a73952))
+* update dependencies ([1c8d793](https://github.com/Beor18/jwt-peliculas-frontend/commit/1c8d793))
+
+
+### Features
+
+* agregado nuevos componentes ([6cc319a](https://github.com/Beor18/jwt-peliculas-frontend/commit/6cc319a))
+* componentes modificados ([96ff514](https://github.com/Beor18/jwt-peliculas-frontend/commit/96ff514))
+
 ### [0.0.5](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.4...v0.0.5) (2019-08-09)
 
 
