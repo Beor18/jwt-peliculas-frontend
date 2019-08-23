@@ -7,3 +7,7 @@ export const guestLinks = (
 export const invitadoLinks = (
   <h2>Bienvenido a Home componente usted no esta logeado</h2>
 )
+
+export const sinPermisoAdmin = (
+  <h2>UPS! NO TIENE PERMISOS!!</h2>
+)

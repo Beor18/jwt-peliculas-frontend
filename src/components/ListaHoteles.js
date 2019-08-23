@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { cargarHoteles } from '../actions/authentication';
@@ -22,15 +23,17 @@ class ListaHoteles extends Component {
         const pelicula = this.props.peliculas;
         return Object.keys(pelicula).map(key => ( 
             <div key={key} className="col-md-4">
-                <div className="card bg-dark text-white">
-                    <img src={pelicula[key].images} className="card-img" alt="..." />
-                    <div className="card-img-overlay">
-                        {/* <h5 className="card-title">{pelicula[key].name}</h5>
-                        <p className="card-text">{pelicula[key].description}</p>
-                        <p className="card-text">Last updated 3 mins ago</p> 
-                        <FontAwesomeIcon icon={faStar} /> */}
+                <Link to={"/pelicula/" + pelicula[key]._id}>
+                    <div className="card bg-dark text-white">
+                        <img src={pelicula[key].images} className="card-img" alt="..." />
+                        <div className="card-img-overlay">
+                            {/* <h5 className="card-title">{pelicula[key].name}</h5>
+                            <p className="card-text">{pelicula[key].description}</p>
+                            <p className="card-text">Last updated 3 mins ago</p> 
+                            <FontAwesomeIcon icon={faStar} /> */}
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
             
         ))

@@ -5,6 +5,7 @@ import { loginUser } from '../actions/authentication';
 import { withRouter } from 'react-router-dom';
 import ListaHoteles from '../components/ListaHoteles';
 import { invitadoLinks} from '../components/permisos/MensajePermiso';
+import Navbar from '../components/Navbar';
 
 class Home extends Component {
 
@@ -12,13 +13,16 @@ class Home extends Component {
         const { isAuthenticated } = this.props.auth;
 
         const authLinks = (
-            <div className="col-12">  
-                <ListaHoteles />
+            <div className="">
+                <Navbar />  
+                <div className="container" style={{marginTop: '20px'}}>
+                    <ListaHoteles />
+                </div>
             </div>
         )
         
         return(
-            <div className="col-12" style={{ marginTop: '20px', marginBottom: '20px'}}>
+            <div className="">
                { isAuthenticated ? authLinks : invitadoLinks }
             </div>
             

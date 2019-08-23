@@ -18,6 +18,9 @@ class Navbar extends Component {
         const cargarRegistro = (
             <Link className="nav-link" to="/cargar-registro">Cargar Registros</Link>
         )
+        const registrarUsuario = (
+            <Link className="nav-link" to="/register">Registro</Link>
+        )
         const authLinks = (
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
@@ -30,15 +33,15 @@ class Navbar extends Component {
                     { this.props.user.role === 'administrador' ? cargarRegistro : guestLinks }   
                 </li>
                 <li className="nav-item">
+                    { this.props.user.role === 'administrador' ? registrarUsuario : guestLinks }
+                </li>
+                <li className="nav-item">
                     <a href={'/login'} className="nav-link" onClick={this.onLogout.bind(this)}>Salir</a>
                 </li>
             </ul>
         )
         const guestNavLinks = (
             <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                    <Link className="nav-link" to="/register">Registro</Link>
-                </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/login">Login</Link>
                 </li>
