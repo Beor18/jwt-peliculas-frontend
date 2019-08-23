@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.6...v0.0.7) (2019-08-23)
+
+
+### Bug Fixes
+
+* update package ([b4a2e84](https://github.com/Beor18/jwt-peliculas-frontend/commit/b4a2e84))
+
+
+### Features
+
+* add new component login ([6bb95d9](https://github.com/Beor18/jwt-peliculas-frontend/commit/6bb95d9))
+* add new component not found 404 ([3ea4a30](https://github.com/Beor18/jwt-peliculas-frontend/commit/3ea4a30))
+* add new component pelicula ([401c12a](https://github.com/Beor18/jwt-peliculas-frontend/commit/401c12a))
+* new features and fixs ([39fe74e](https://github.com/Beor18/jwt-peliculas-frontend/commit/39fe74e))
+
 ### [0.0.6](https://github.com/Beor18/jwt-peliculas-frontend/compare/v0.0.5...v0.0.6) (2019-08-20)
 
 

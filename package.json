@@ -1,6 +1,6 @@
 {
     "name": "jwt_peliculas_client",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "private": true,
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.15",
