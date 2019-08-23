@@ -12,6 +12,8 @@ class FormularioHotel extends Component {
         this.state = {
             name: '',
             description: '',
+            images: '',
+            stars: '',
             errors: {}
         }
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -28,7 +30,9 @@ class FormularioHotel extends Component {
         e.preventDefault();
         const pelicula = {
             name: this.state.name,
-            description: this.state.description
+            description: this.state.description,
+            images: this.state.images,
+            stars: this.state.stars
         }
         this.props.formularioHotel(pelicula, this.props.history.push('/'));
     }
@@ -41,13 +45,13 @@ class FormularioHotel extends Component {
             this.setState({
                 errors: nextProps.errors
             });
-            this.props.history.push('/')
+            this.props.history.push('/cargar-registro')
         }
     }
 
     componentDidMount() {
         if(this.props.peliculas) {
-            this.props.history.push('/');
+            this.props.history.push('/cargar-registro');
         }
     }
 
@@ -71,9 +75,8 @@ class FormularioHotel extends Component {
                     {errors.name && (<div className="invalid-feedback">{errors.name}</div>)}
                 </div>
                 <div className="form-group">
-                    <input
-                    type="text"
-                    placeholder="Precio"
+                    <textarea
+                    placeholder="Descripción"
                     className={classnames('form-control form-control-lg', {
                         'is-invalid': errors.description
                     })}
@@ -83,10 +86,38 @@ class FormularioHotel extends Component {
                     />
                     {errors.description && (<div className="invalid-feedback">{errors.description}</div>)}
                 </div>
+
+                <div className="form-group">
+                    <input
+                    type="text"
+                    placeholder="Agregar url imagen"
+                    className={classnames('form-control form-control-lg', {
+                        'is-invalid': errors.images
+                    })}
+                    name="images"
+                    onChange={ this.handleInputChange }
+                    value={ this.state.images }
+                    />
+                    {errors.images && (<div className="invalid-feedback">{errors.images}</div>)}
+                </div>
+
+                <div className="form-group">
+                    <input
+                    type="number"
+                    placeholder="Agregar cantidad de estrellas"
+                    className={classnames('form-control form-control-lg', {
+                        'is-invalid': errors.stars
+                    })}
+                    name="stars"
+                    onChange={ this.handleInputChange }
+                    value={ this.state.stars }
+                    />
+                    {errors.stars && (<div className="invalid-feedback">{errors.stars}</div>)}
+                </div>
                 
                 <div className="form-group">
                     <button type="submit" className="btn btn-danger" style={{  width: '100%'}}>
-                        Cargar Hotel
+                        Cargar registro al sistema
                     </button>
                 </div>
             </form>

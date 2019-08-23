@@ -4,29 +4,26 @@ import { connect } from 'react-redux';
 import { loginUser } from '../actions/authentication';
 import { withRouter } from 'react-router-dom';
 import ListaHoteles from '../components/ListaHoteles';
-import FormularioHotel from '../components/FormularioHotel';
+import { invitadoLinks} from '../components/permisos/MensajePermiso';
+import Navbar from '../components/Navbar';
 
 class Home extends Component {
 
     render() {
-        const {isAuthenticated} = this.props.auth;
+        const { isAuthenticated } = this.props.auth;
+
         const authLinks = (
-            <div className="col-12">
-                <div className="col-4 mx-auto clearfix">
-                    <FormularioHotel />
-                </div>
-                
-                <div className="px-0">
+            <div className="">
+                <Navbar />  
+                <div className="container" style={{marginTop: '20px'}}>
                     <ListaHoteles />
                 </div>
             </div>
         )
-      const guestLinks = (
-        <h2>Bienvenido a Home componente usted no esta logeado</h2>
-      )
+        
         return(
-            <div className="col-12" style={{ marginTop: '20px', marginBottom: '20px'}}>
-               {isAuthenticated ? authLinks : guestLinks}
+            <div className="">
+               { isAuthenticated ? authLinks : invitadoLinks }
             </div>
             
         );
@@ -38,7 +35,8 @@ Home.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-    auth: state.auth
+    auth: state.auth,
+    user: state.auth.user
 })
 
 export default connect(mapStateToProps, { loginUser })(withRouter(Home));
