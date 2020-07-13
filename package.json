@@ -19,7 +19,7 @@
         "react-scripts": "^3.0.1",
         "redux": "^4.0.1",
         "redux-thunk": "^2.3.0",
-        "standard-version": "^7.0.0"
+        "standard-version": "^8.0.1"
     },
     "scripts": {
         "start": "react-scripts start",
